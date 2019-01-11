@@ -1,5 +1,3 @@
-package com.boeing;
-
 import java.util.Scanner;
 
 public class CharCount {
@@ -9,7 +7,12 @@ public class CharCount {
         String statement = scan.nextLine();
         System.out.println("Please enter the character to find occurrence");
         Scanner scanChar = new Scanner(System.in);
-        String charCount = scanChar.nextLine();
+
+    }
+
+    public static int charCount(String statement, String count){
+        String charCount = count;
+        int countOcc = 0;
         String[] statementArray = statement.split(charCount);
         if(statementArray==null){
             System.out.println("No occurance found");
@@ -19,6 +22,9 @@ public class CharCount {
                 noOfOccurrence++;
             }
             System.out.println("Number of occurance found is " + (statementArray.length-1));
+            countOcc = statementArray.length-1;
         }
+
+        return countOcc;
     }
 }

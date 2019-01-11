@@ -1,5 +1,3 @@
-package com.boeing;
-
 import java.util.Scanner;
 
 public class SortingWord {
@@ -7,6 +5,10 @@ public class SortingWord {
         System.out.println("Please enter the statement");
         Scanner scan = new Scanner(System.in);
         String statement = scan.nextLine();
+
+    }
+
+    public static String [] sortState(String statement){
         String [] wordArray = statement.split(" ");
         String temp;
         for(int i = 0; i < wordArray.length; i++){
@@ -23,5 +25,6 @@ public class SortingWord {
         for(int i = 0; i < wordArray.length; i++){
             System.out.println(wordArray[i]);
         }
+        return wordArray;
     }
 }

@@ -1,5 +1,3 @@
-package com.boeing;
-
 import java.util.Scanner;
 
 public class ReplaceString {
@@ -9,5 +7,9 @@ public class ReplaceString {
         String statement = scan.nextLine();
         statement = statement.replace('d','f');
         System.out.println(statement.replace('l','t'));
+    }
+
+    public static String replace(String statement){
+        return statement.replace('d','f');
     }
 }
